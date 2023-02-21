@@ -1,11 +1,14 @@
-import Jogo from './components/Jogo';
-import Letras from './components/Letras';
+import Jogo from './Jogo';
+import Letras from './Letras';
+import "../styles/reset.css";
+import "../styles/style.css";
 
 export default function App() {
   return (
-    <div>
-      Projeto Forca
-    </div>
+    <>
+    <Jogo/>
+    <Letras/>
+    </>
   );
 }
 
