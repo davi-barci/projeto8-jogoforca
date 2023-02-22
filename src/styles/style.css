@@ -42,7 +42,7 @@ body {
     margin-top: 30px;
 }
 
-.container-palavra p {
+.palavra-jogo {
     height: 68px;
     font-family: 'Noto Sans', sans-serif;
     font-style: normal;
@@ -55,6 +55,14 @@ body {
     text-align: center;
     color: #000000;
     margin-top: 282px;
+}
+
+.acertou-palavra{
+    color:#27AE60;
+}
+
+.errou-palavra{
+    color:#FF0000;
 }
 
 .container-letras {
@@ -96,3 +104,4 @@ body {
 .container-letras button:nth-of-type(n+14){
     margin-top: 11px;
 }
+

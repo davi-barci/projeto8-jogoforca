@@ -12,6 +12,8 @@ export default function Jogo(props) {
 
     function escolherPalavra(){
         const indexSorteado = Math.floor(Math.random() * props.palavras.length);
+        props.setJogoEstadoAtual("");
+        props.setQtdErros(0);
         props.setResposta(props.palavras[indexSorteado]);
         props.setPalavra("_ ".repeat(props.palavras[indexSorteado].length));
         props.setLetrasHabilitadas(true);
@@ -23,7 +25,9 @@ export default function Jogo(props) {
 
             <div className="container-palavra">
                 <button onClick={escolherPalavra}>Escolher Palavra</button>
-                <p>{props.palavra}</p>
+                <p className={(props.jogoEstadoAtual == "ganhou") ? ("palavra-jogo acertou-palavra") : ((props.jogoEstadoAtual == "perdeu") ? ("palavra-jogo errou-palavra") : ("palavra-jogo"))}>
+                    {props.palavra}
+                </p>
             </div>
         </div>
     );

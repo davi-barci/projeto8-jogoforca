@@ -11,6 +11,7 @@ export default function App() {
   const [resposta, setResposta] = useState("");
   const [palavra, setPalavra] = useState("");
   const [letrasEscolhidas, setLetrasEscolhidas] = useState([]);
+  const [jogoEstadoAtual, setJogoEstadoAtual] = useState("");
 
   return (
     <>
@@ -21,9 +22,14 @@ export default function App() {
           palavra = {palavra}
           setPalavra = {setPalavra}
           qtdErros = {qtdErros}
+          setQtdErros = {setQtdErros}
+          jogoEstadoAtual = {jogoEstadoAtual}
+          setJogoEstadoAtual = {setJogoEstadoAtual}
+          letrasEscolhidas = {letrasEscolhidas}
     />
     <Letras 
           letrasHabilitadas={letrasHabilitadas}
+          setLetrasHabilitadas={setLetrasHabilitadas} 
           qtdErros = {qtdErros}
           setQtdErros = {setQtdErros}
           resposta = {resposta}
@@ -31,6 +37,7 @@ export default function App() {
           setPalavra = {setPalavra}
           letrasEscolhidas = {letrasEscolhidas}
           setLetrasEscolhidas = {setLetrasEscolhidas}
+          setJogoEstadoAtual = {setJogoEstadoAtual}
     />
     </>
   );

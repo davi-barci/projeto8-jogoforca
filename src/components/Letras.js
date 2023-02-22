@@ -11,17 +11,32 @@ export default function Letras(props) {
                     palavra[index] = letra;
                 }
             });
-            props.setPalavra(palavra.join(" "));
+            if (!palavra.includes("_")){
+                props.setJogoEstadoAtual("ganhou");
+                props.setLetrasHabilitadas(false);
+                props.setLetrasEscolhidas([...[]]);
+                props.setPalavra(palavra.join(""));
+                return;
+            }else{
+                props.setPalavra(palavra.join(" "));
+            }
         }else{
             props.setQtdErros(props.qtdErros + 1);
+            if (props.qtdErros+1 == 6){
+                props.setJogoEstadoAtual("perdeu");
+                props.setLetrasHabilitadas(false);
+                props.setLetrasEscolhidas([...[]]);
+                props.setPalavra(resposta.join(""));
+                return;
+            }
         }
         props.setLetrasEscolhidas([...props.letrasEscolhidas, letra]);
     }
 
     return (
         <div className="container-letras">
-            {alfabeto.map((elem) => 
-            <button onClick={() => escolherLetra(elem)} disabled={(props.letrasHabilitadas && !props.letrasEscolhidas.includes(elem)) ? false : true}>
+            {alfabeto.map((elem, index) => 
+            <button key={index} onClick={() => escolherLetra(elem)} disabled={(props.letrasHabilitadas && !props.letrasEscolhidas.includes(elem)) ? false : true}>
                 {elem.toUpperCase()}
             </button>
             )}
