@@ -21,11 +21,11 @@ export default function Jogo(props) {
 
     return (
         <div className="container-jogo">
-            <img src={imagens[props.qtdErros]} alt="imagem_forca" className="imagem-forca"></img>
+            <img data-test="game-image" src={imagens[props.qtdErros]} alt="imagem_forca" className="imagem-forca"></img>
 
             <div className="container-palavra">
-                <button onClick={escolherPalavra}>Escolher Palavra</button>
-                <p className={(props.jogoEstadoAtual == "ganhou") ? ("palavra-jogo acertou-palavra") : ((props.jogoEstadoAtual == "perdeu") ? ("palavra-jogo errou-palavra") : ("palavra-jogo"))}>
+                <button data-test="choose-word" onClick={escolherPalavra}>Escolher Palavra</button>
+                <p data-test="word" className={(props.jogoEstadoAtual == "ganhou") ? ("palavra-jogo acertou-palavra") : ((props.jogoEstadoAtual == "perdeu") ? ("palavra-jogo errou-palavra") : ("palavra-jogo"))}>
                     {props.palavra}
                 </p>
             </div>
