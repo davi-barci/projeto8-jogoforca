@@ -1,5 +1,6 @@
 import Jogo from './Jogo';
 import Letras from './Letras';
+import Chute from './Chute';
 import palavras from '../palavras';
 import "../styles/reset.css";
 import "../styles/style.css";
@@ -12,6 +13,7 @@ export default function App() {
   const [palavra, setPalavra] = useState("");
   const [letrasEscolhidas, setLetrasEscolhidas] = useState([]);
   const [jogoEstadoAtual, setJogoEstadoAtual] = useState("");
+  const [chuteResposta, setChuteResposta] = useState("");
 
   return (
     <>
@@ -26,6 +28,8 @@ export default function App() {
           jogoEstadoAtual = {jogoEstadoAtual}
           setJogoEstadoAtual = {setJogoEstadoAtual}
           letrasEscolhidas = {letrasEscolhidas}
+          setLetrasEscolhidas = {setLetrasEscolhidas}
+          setChuteResposta = {setChuteResposta}
     />
     <Letras 
           letrasHabilitadas={letrasHabilitadas}
@@ -38,6 +42,18 @@ export default function App() {
           letrasEscolhidas = {letrasEscolhidas}
           setLetrasEscolhidas = {setLetrasEscolhidas}
           setJogoEstadoAtual = {setJogoEstadoAtual}
+    />
+
+    <Chute
+          chuteResposta = {chuteResposta}
+          setChuteResposta = {setChuteResposta}
+          resposta = {resposta}
+          setJogoEstadoAtual = {setJogoEstadoAtual}
+          letrasHabilitadas = {letrasHabilitadas}
+          setLetrasHabilitadas = {setLetrasHabilitadas}
+          setLetrasEscolhidas = {setLetrasEscolhidas}
+          setPalavra = {setPalavra}
+          setQtdErros = {setQtdErros}
     />
     </>
   );

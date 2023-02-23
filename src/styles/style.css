@@ -57,12 +57,12 @@ body {
     margin-top: 282px;
 }
 
-.acertou-palavra{
-    color:#27AE60;
+.acertou-palavra {
+    color: #27AE60;
 }
 
-.errou-palavra{
-    color:#FF0000;
+.errou-palavra {
+    color: #FF0000;
 }
 
 .container-letras {
@@ -97,11 +97,63 @@ body {
     color: #798A9F;
 }
 
-.container-letras button:nth-of-type(13n){
+.container-letras button:nth-of-type(13n) {
     margin-right: 0px;
 }
 
-.container-letras button:nth-of-type(n+14){
+.container-letras button:nth-of-type(n+14) {
     margin-top: 11px;
 }
 
+.container-chute {
+    width: 100%;
+    height: 40px;
+    margin: 56px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-chute>p {
+    width: 144px;
+    height: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    color: #000000;
+}
+
+.container-chute>input {
+    width: 353px;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 15px;
+    box-sizing: border-box;
+}
+
+.container-chute>button {
+    width: 100px;
+    height: 100%;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3C76A1;
+}

@@ -14,9 +14,11 @@ export default function Jogo(props) {
         const indexSorteado = Math.floor(Math.random() * props.palavras.length);
         props.setJogoEstadoAtual("");
         props.setQtdErros(0);
+        props.setChuteResposta("");
         props.setResposta(props.palavras[indexSorteado]);
         props.setPalavra("_ ".repeat(props.palavras[indexSorteado].length));
         props.setLetrasHabilitadas(true);
+        props.setLetrasEscolhidas([...[]]);
     }
 
     return (
