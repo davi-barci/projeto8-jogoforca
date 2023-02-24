@@ -11,7 +11,8 @@ export default function Chute(props) {
                 props.setJogoEstadoAtual("perdeu");
                 props.setLetrasHabilitadas(false);
                 props.setLetrasEscolhidas([...[]]);
-                props.setQtdErros(6);
+                const qtdMaximaErros = 6;
+                props.setQtdErros(qtdMaximaErros);
                 props.setPalavra(props.resposta);
             }
         }
@@ -20,7 +21,8 @@ export default function Chute(props) {
     return(
         <div className="container-chute">
             <p>Já sei a palavra!</p>
-            <input data-test="guess-input" disabled={(props.letrasHabilitadas) ? false : true} value={props.chuteResposta} onChange={e => props.setChuteResposta(e.target.value)}></input>
+            <input data-test="guess-input" disabled={(props.letrasHabilitadas) ? false : true} value={props.chuteResposta} 
+            onChange={e => props.setChuteResposta(e.target.value)}></input>
             <button data-test="guess-button" onClick={conferirChute}>Chutar</button>
         </div>
     );

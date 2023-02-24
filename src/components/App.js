@@ -17,8 +17,8 @@ export default function App() {
 
   return (
     <>
-    <Jogo 
-          setLetrasHabilitadas={setLetrasHabilitadas} 
+    <Jogo
+          setLetrasHabilitadas={setLetrasHabilitadas}
           palavras={palavras}
           setResposta = {setResposta}
           palavra = {palavra}
@@ -31,9 +31,9 @@ export default function App() {
           setLetrasEscolhidas = {setLetrasEscolhidas}
           setChuteResposta = {setChuteResposta}
     />
-    <Letras 
+    <Letras
           letrasHabilitadas={letrasHabilitadas}
-          setLetrasHabilitadas={setLetrasHabilitadas} 
+          setLetrasHabilitadas={setLetrasHabilitadas}
           qtdErros = {qtdErros}
           setQtdErros = {setQtdErros}
           resposta = {resposta}
