@@ -31,7 +31,7 @@ export default function Jogo(props) {
 
             <ContainerPalavra>
                 <button data-test="choose-word" onClick={escolherPalavra}>Escolher Palavra</button>
-                <PalavraJogo data-test="word" color={(props.jogoEstadoAtual === "ganhou") ? "acertou" : 
+                <PalavraJogo data-test="word" color={(props.jogoEstadoAtual === "ganhou") ? "acertou" :
                 ((props.jogoEstadoAtual === "perdeu") ? "errou" : "palavra")}>
                     {props.palavra}
                 </PalavraJogo>

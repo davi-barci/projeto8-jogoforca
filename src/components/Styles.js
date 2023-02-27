@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
         background-color: #FFFFFF;
   }
-`
+`;
 
 export const ContainerJogo = styled.div`
     width: 100%;
@@ -27,7 +27,7 @@ export const ContainerJogo = styled.div`
       height: 466.67px;
       margin-left: 38px;
     }
-`
+`;
 
 export const ContainerPalavra = styled.div`
       height: 100%;
@@ -53,7 +53,7 @@ export const ContainerPalavra = styled.div`
           color: #FFFFFF;
           margin-top: 30px;
       }
-`
+`;
 
 export const PalavraJogo = styled.p`
       height: 68px;
@@ -68,7 +68,7 @@ export const PalavraJogo = styled.p`
       text-align: center;
       color: ${props => (props.color === "palavra") ? "#000000" : (props.color === "acertou") ? `#27AE60` : `#FF0000`};
       margin-top: 282px;
-`
+`;
 
 export const ContainerLetras = styled.div`
     width: 100%;
@@ -114,7 +114,7 @@ export const ContainerLetras = styled.div`
     button:nth-of-type(n+14) {
       margin-top: 11px;
     }
-`
+`;
 
 export const ContainerChute = styled.div`
     width: 100%;
@@ -167,5 +167,5 @@ export const ContainerChute = styled.div`
       justify-content: center;
       color: #3C76A1;
     }
-`
+`;
 
