@@ -5,6 +5,9 @@ import forca3 from "../assets/img/forca3.png";
 import forca4 from "../assets/img/forca4.png";
 import forca5 from "../assets/img/forca5.png";
 import forca6 from "../assets/img/forca6.png";
+import { ContainerJogo } from "./Styles";
+import { ContainerPalavra } from "./Styles";
+import { PalavraJogo } from "./Styles";
 
 export default function Jogo(props) {
 
@@ -23,16 +26,16 @@ export default function Jogo(props) {
     }
 
     return (
-        <div className="container-jogo">
-            <img data-test="game-image" src={imagens[props.qtdErros]} alt="imagem_forca" className="imagem-forca"></img>
+        <ContainerJogo>
+            <img data-test="game-image" src={imagens[props.qtdErros]} alt="imagem_forca"></img>
 
-            <div className="container-palavra">
+            <ContainerPalavra>
                 <button data-test="choose-word" onClick={escolherPalavra}>Escolher Palavra</button>
-                <p data-test="word" className={(props.jogoEstadoAtual === "ganhou") ? ("palavra-jogo acertou-palavra") : 
-                ((props.jogoEstadoAtual === "perdeu") ? ("palavra-jogo errou-palavra") : ("palavra-jogo"))}>
+                <PalavraJogo data-test="word" color={(props.jogoEstadoAtual === "ganhou") ? "acertou" : 
+                ((props.jogoEstadoAtual === "perdeu") ? "errou" : "palavra")}>
                     {props.palavra}
-                </p>
-            </div>
-        </div>
+                </PalavraJogo>
+            </ContainerPalavra>
+        </ContainerJogo>
     );
 }
